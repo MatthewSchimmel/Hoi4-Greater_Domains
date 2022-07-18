@@ -1,0 +1,20 @@
+state={
+	id=835
+	name="STATE_835"
+	history={
+		owner = SWI
+		add_core_of = SWI
+		victory_points = {
+			9600 1
+		}
+	}
+
+	provinces={
+		658 3641 3662 9600
+	}
+
+	manpower=278200
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=836
+	name="STATE_836"
+	history={
+		owner = SWI
+		add_core_of = SWI
+		victory_points = {
+			6666 3
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 0
+
+		}
+	}
+
+	provinces={
+		3612 6666 6683 9622 11590 13124
+	}
+	manpower=742000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
