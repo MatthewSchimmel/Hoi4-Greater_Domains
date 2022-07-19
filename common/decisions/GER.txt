@@ -943,41 +943,6 @@ GER_reichskommissariats = {
 	}
 }
 
-GER_Volkersintegration = {
-	GER_integrate_poznan = {
-
-		icon = GFX_decision_icon_default
-		highlight_states = {86}
-		available = {
-			has_completed_focus = GER_proclaim_greater_germanic_reich
-			86 = {
-				is_fully_controlled_by = ROOT
-				has_active_resistance = no
-				compliance > 60
-			}
-		}
-
-		cost = 0
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 1
-				ENG = { has_capitulated = yes }
-			}
-		}
-
-		visible = {
-			has_completed_focus = GER_form_the_reichskommissariats
-			has_government = fascism
-		}
-
-		complete_effect = {
-			add_state_core = 86
-		}
-	}
-}
-
-
 political_actions = {
 
 	# Reinstate Wilhelm IV into the line of succession
@@ -1810,4 +1775,73 @@ GER_austro_hungarian_empire = {
 			}
 		}
 	}
+}
+
+GER_Volkersintegration = {
+	GER_core_poznan = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 86 }
+		#CONDITIONS
+		available = {
+			86 = {
+				is_fully_controlled_by = ROOT
+				#has_active_resistance = no
+				#compliance > 60
+			}
+		}
+
+		fire_only_once = yes #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 86
+			86 = { set_state_name = "Posen"}
+			hidden_effect = {
+				set_province_name = {id = 6558 name = "Posen"}
+			}
+		}
+	}
+	GER_core_katowice = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 762 }
+		#CONDITIONS
+		available = {
+			762 = {
+				is_fully_controlled_by = ROOT
+				#has_active_resistance = no
+				#compliance > 60
+			}
+		}
+
+		fire_only_once = yes #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 762
+			762 = { set_state_name = "Kattowitz"} #Katowice
+			hidden_effect = {
+				set_province_name = {id = 6464 name = "Kattowitz"}
+			}
+		}
+	}
+	# set_province_name = {id = 279 name = "Bromberg"} #Bydgoszcz
+	# set_province_name = {id = 3295 name = "Thorn"} #Toruń
+	# set_province_name = {id = 9263 name = "Gotenhafen"} #Gdynia
+	# set_province_name = {id = 6464 name = "Kattowitz"} #Katowice
+	# set_province_name = {id = 3585 name = "Karlsbad"} #Carlsbad
+	# set_province_name = {id = 11401 name = "Reichenberg"} #Liberec
+	# set_province_name = {id = 3583 name = "Ostrau"} #Ostrava
+	# state gdynia - Westpreußen
 }
