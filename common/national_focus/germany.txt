@@ -4584,13 +4584,11 @@ focus_tree = {
 			add_popularity = { ideology = fascism popularity = 0.05 }
 			add_state_core = 85 #danzig
 			add_state_core = 807 #gdynsk
-
 			#custom_effect_tooltip = GER_Volkersintegration_tt
 			#unlock_decision_tooltip: GER_integrate_poznan
 			# unlock_decision_tooltip: integrate_sudetenland
 			# unlock_decision_tooltip: integrate_alsace_lorraine
 			# unlock_decision_tooltip: integrate_luxemburg
-			# unlock_decision_tooltip: empower_belgian_seperatists
 		}
 	}
 
@@ -4667,7 +4665,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_integrate_the_dutch
+		id = GER_integrate_netherlands
 		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
 		icon = GFX_goal_generic_position_armies
 		available = {
@@ -4704,6 +4702,8 @@ focus_tree = {
 			add_state_core = 7
 			add_state_core = 35
 			add_state_core = 36
+			set_province_name = {id = 3211  name = "Den Haag"}
+			set_province_name = {id = 9363  name = "Arnheim"}
 			if = {
 				limit = {
 					ROOT = {
@@ -4712,7 +4712,8 @@ focus_tree = {
 				}
 				add_state_core = 6
 				6 = { set_state_name = "Flandern"}
-				set_province_name = { id = 516 name = "Brüssel" }
+				set_province_name = {id = 13068 name = "Löwen"}
+				set_province_name = {id = 516 name = "Brüssel"}
 			}
 		}
 	}
@@ -4751,16 +4752,37 @@ focus_tree = {
 		completion_reward = {
 			FRA = {add_state_core = 34}
 			HOL = {add_state_core = 6}
-			hidden_effect = {
 				if = {
 					limit = {
 						ROOT = {
-							has_completed_focus = GER_integrate_the_dutch
+							NOT = {has_completed_focus = GER_integrate_netherlands}
+						}
+					}
+					set_province_name = {id = 516 name = "Brussel"}
+				} else = {
+					if = {
+						limit = {
+							ROOT = {
+								NOT = {has_completed_focus = GER_empower_belgian_seperatists}
+							}
+						}
+						add_state_core = 6
+						6 = { set_state_name = "Flandern"}
+						set_province_name = {id = 13068 name = "Löwen"}
+						set_province_name = {id = 516 name = "Brüssel"}
+					}
+				}
+			hidden_effect = { #germanizes the names from the dutch
+				if = {
+					limit = {
+						ROOT = {
+							has_completed_focus = GER_integrate_netherlands
 						}
 					}
 					add_state_core = 6
-				6 = { set_state_name = "Flandern"}
-				set_province_name = { id = 516 name = "Brüssel" }
+					6 = { set_state_name = "Flandern"}
+					set_province_name = {id = 13068 name = "Löwen"}
+					set_province_name = {id = 516 name = "Brüssel"}
 				}
 			}
 		}
