@@ -1786,7 +1786,10 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_full_control_of_state = 85
-			85 = {resistance < 25}
+			85 = {
+				resistance < 25
+				compliance > 60
+				}
 			if = {
 				limit = {
 					AND = {
@@ -1800,9 +1803,7 @@ GER_Volkersintegration = {
 		visible = {
 			85 = {
 				NOT = {is_core_of = ROOT}
-				controller = {
-					tag = GER
-				}
+				controller = GER
 			}
 		}
 
@@ -1825,24 +1826,32 @@ GER_Volkersintegration = {
  		targets = { state = 807 }
 		#CONDITIONS
 		available = {
-			has_full_control_of_state = 86
-			OR = {
-				owns_state = 86
-				POL = { has_capitulated = yes }
-				POL = { exists = no }
+			has_full_control_of_state = 807
+			807 = {
+				resistance < 25
+				compliance > 60
+				}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						POL = {owns_state = 807}
+					}
+				}
+					POL = { has_capitulated = yes }
 			}
 		}
-
 		visible = {
-			86 = {
-				NOT = { is_core_of = ROOT }
+			807 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 0
+		cost = 50
 
 		#EFFECTS
 
@@ -1863,23 +1872,31 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_full_control_of_state = 86
-			OR = {
-				owns_state = 86
-				POL = { has_capitulated = yes }
-				POL = { is_subject_of = ROOT}
-				POL = { exists = no }
+			86 = {
+				resistance < 25
+				compliance > 60
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						POL = {owns_state = 86}
+					}
+				}
+					POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			NOT = {
-				86 = {is_core_of = ROOT}
+			86 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 
@@ -1900,23 +1917,31 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_full_control_of_state = 762
-			OR = {
-				owns_state = 762
-				POL = { has_capitulated = yes }
-				POL = { is_subject_of = ROOT}
-				POL = { exists = no }
+			762 = {
+				resistance < 25
+				compliance > 60
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						POL = {owns_state = 762}
+					}
+				}
+					POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			NOT = {
-				762 = {is_core_of = ROOT}
+			762 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 
@@ -1936,23 +1961,31 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_full_control_of_state = 69
-			OR = {
-				owns_state = 69
-				CZE = { has_capitulated = yes }
-				CZE = { is_subject_of = ROOT}
-				CZE = { exists = no }
+			69 = {
+				resistance < 25
+				compliance > 60
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						CZE = {owns_state = 69}
+					}
+				}
+					CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			NOT = {
-				69 = {is_core_of = ROOT}
+			69 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 		complete_effect = {
@@ -1970,23 +2003,31 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_full_control_of_state = 74
-			OR = {
-				owns_state = 74
-				CZE = { has_capitulated = yes }
-				CZE = { is_subject_of = ROOT}
-				CZE = { exists = no }
+			74 = {
+				resistance < 25
+				compliance > 60
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						CZE = {owns_state = 74}
+					}
+				}
+					CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			NOT = {
-				74 = {is_core_of = ROOT}
+			74 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 		complete_effect = {
@@ -1999,7 +2040,7 @@ GER_Volkersintegration = {
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 8 }
-		#CONDITIONS
+		#CONDITIONS (has the requirements of the old focus)
 		available = {
 			has_full_control_of_state = 8
 			OR = {
@@ -2017,7 +2058,7 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 
@@ -2039,7 +2080,7 @@ GER_Volkersintegration = {
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 28 }
-		#CONDITIONS
+		#CONDITIONS (has the requirements of the old focus)
 		available = {
 			has_full_control_of_state = 28
 			OR = {
@@ -2063,7 +2104,7 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 25
+		cost = 50
 
 		#EFFECTS
 
