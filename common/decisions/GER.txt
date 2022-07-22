@@ -1953,6 +1953,47 @@ GER_Volkersintegration = {
 			}
 		}
 	}
+
+	GER_core_memel = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 188 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 188
+			188 = {
+				resistance < 25
+				compliance > 60
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = LIT
+						LIT = {owns_state = 188}
+					}
+				}
+					LIT = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			188 = {
+				NOT = {is_core_of = ROOT}
+				controller = GER
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+		complete_effect = {
+			add_state_core = 188
+		}
+	}
+
 	GER_core_sudetenland = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -1994,6 +2035,7 @@ GER_Volkersintegration = {
 			set_province_name = {id = 3585 name = "Karlsbad"} #Carlsbad
 		}
 	}
+
 	GER_core_east_sudetenland = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -2035,6 +2077,7 @@ GER_Volkersintegration = {
 			set_province_name = {id = 3583 name = "Ostrau"} #Ostrava
 		}
 	}
+
 	GER_core_luxemburg = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -2044,7 +2087,6 @@ GER_Volkersintegration = {
 		available = {
 			has_full_control_of_state = 8
 			OR = {
-				owns_state = 8
 				LUX = { has_capitulated = yes }
 				LUX = {exists = no}
 			}
@@ -2052,6 +2094,7 @@ GER_Volkersintegration = {
 		visible = {
 			NOT = {
 				8 = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
@@ -2075,6 +2118,7 @@ GER_Volkersintegration = {
 				}
 		}
 	}
+
 	GER_core_alsace = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -2098,6 +2142,7 @@ GER_Volkersintegration = {
 		visible = {
 			NOT = {
 				28 = {is_core_of = ROOT}
+				controller = GER
 			}
 		}
 
@@ -2109,12 +2154,18 @@ GER_Volkersintegration = {
 		#EFFECTS
 
 		complete_effect = {
-				28 = { set_state_name = "Elsass-Lothringen" }
-				set_province_name = { id = 9503 name = "Straßburg" }
-				set_province_name = { id = 678 name = "Mülhausen" }
-				FRA = {
-					country_event = { id = wtt_germany.63 }
+			add_state_core = 28
+			if = {
+				limit = {
+					NOT = { owns_state = 28 }
 				}
-		}
+				transfer_state = 28
+			}
+			28 = { set_state_name = "Elsass-Lothringen" }
+			set_province_name = { id = 9503 name = "Strassburg" }
+			set_province_name = { id = 678 name = "Mulhausen" }
+			FRA = {
+				country_event = { id = wtt_germany.63 }
+			}
 	}
 }
