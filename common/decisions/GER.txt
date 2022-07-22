@@ -1778,6 +1778,83 @@ GER_austro_hungarian_empire = {
 }
 
 GER_Volkersintegration = {
+		GER_core_danzig = { ###THIS HAS THE BEST CONDITIONS! (delete this when others are copied)
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes ##put this line and next one under if statement to lock if not controlled
+ 		targets = { state = 85 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 85
+			85 = {resistance < 25}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						POL = {owns_state = 85}
+					}
+				}
+					POL = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			85 = {
+				NOT = {is_core_of = ROOT}
+				controller = {
+					tag = GER
+				}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 0
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 85
+		}
+	}
+
+	GER_core_gdynia = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 807 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 86
+			OR = {
+				owns_state = 86
+				POL = { has_capitulated = yes }
+				POL = { exists = no }
+			}
+		}
+
+		visible = {
+			86 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 0
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 807
+			807 = { set_state_name = "Westpreußen"}
+			set_province_name = {id = 279 name = "Bromberg"} #Bydgoszcz
+			set_province_name = {id = 3295 name = "Thorn"} #Toruń
+			set_province_name = {id = 9263 name = "Gotenhafen"} #Gdynia
+		}
+	}
+
 	GER_core_poznan = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -1785,14 +1862,21 @@ GER_Volkersintegration = {
  		targets = { state = 86 }
 		#CONDITIONS
 		available = {
-			86 = {
-				is_fully_controlled_by = ROOT
-				#has_active_resistance = no
-				#compliance > 60
+			has_full_control_of_state = 86
+			OR = {
+				owns_state = 86
+				POL = { has_capitulated = yes }
+				POL = { is_subject_of = ROOT}
+				POL = { exists = no }
+			}
+		}
+		visible = {
+			NOT = {
+				86 = {is_core_of = ROOT}
 			}
 		}
 
-		fire_only_once = yes #if yes, will appear once and never again after excecution
+		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
 		cost = 25
@@ -1807,6 +1891,7 @@ GER_Volkersintegration = {
 			}
 		}
 	}
+
 	GER_core_katowice = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -1814,14 +1899,21 @@ GER_Volkersintegration = {
  		targets = { state = 762 }
 		#CONDITIONS
 		available = {
-			762 = {
-				is_fully_controlled_by = ROOT
-				#has_active_resistance = no
-				#compliance > 60
+			has_full_control_of_state = 762
+			OR = {
+				owns_state = 762
+				POL = { has_capitulated = yes }
+				POL = { is_subject_of = ROOT}
+				POL = { exists = no }
+			}
+		}
+		visible = {
+			NOT = {
+				762 = {is_core_of = ROOT}
 			}
 		}
 
-		fire_only_once = yes #if yes, will appear once and never again after excecution
+		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
 		cost = 25
@@ -1836,12 +1928,152 @@ GER_Volkersintegration = {
 			}
 		}
 	}
-	# set_province_name = {id = 279 name = "Bromberg"} #Bydgoszcz
-	# set_province_name = {id = 3295 name = "Thorn"} #Toruń
-	# set_province_name = {id = 9263 name = "Gotenhafen"} #Gdynia
-	# set_province_name = {id = 6464 name = "Kattowitz"} #Katowice
-	# set_province_name = {id = 3585 name = "Karlsbad"} #Carlsbad
-	# set_province_name = {id = 11401 name = "Reichenberg"} #Liberec
-	# set_province_name = {id = 3583 name = "Ostrau"} #Ostrava
-	# state gdynia - Westpreußen
+	GER_core_sudetenland = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 69 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 69
+			OR = {
+				owns_state = 69
+				CZE = { has_capitulated = yes }
+				CZE = { is_subject_of = ROOT}
+				CZE = { exists = no }
+			}
+		}
+		visible = {
+			NOT = {
+				69 = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+		complete_effect = {
+			add_state_core = 69
+			set_province_name = {id = 11401 name = "Reichenberg"} #Liberec
+			set_province_name = {id = 3585 name = "Karlsbad"} #Carlsbad
+		}
+	}
+	GER_core_east_sudetenland = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 74 }
+
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 74
+			OR = {
+				owns_state = 74
+				CZE = { has_capitulated = yes }
+				CZE = { is_subject_of = ROOT}
+				CZE = { exists = no }
+			}
+		}
+		visible = {
+			NOT = {
+				74 = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+		complete_effect = {
+			add_state_core = 74
+			set_province_name = {id = 3583 name = "Ostrau"} #Ostrava
+		}
+	}
+	GER_core_luxemburg = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 8 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 8
+			OR = {
+				owns_state = 8
+				LUX = { has_capitulated = yes }
+				LUX = {exists = no}
+			}
+		}
+		visible = {
+			NOT = {
+				8 = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 8
+				if = {
+					limit = {
+						NOT = { owns_state = 8 }
+					}
+					transfer_state = 8
+				}
+				LUX = {
+					country_event = { id = wtt_germany.64 }
+				}
+		}
+	}
+	GER_core_alsace = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 28 }
+		#CONDITIONS
+		available = {
+			has_full_control_of_state = 28
+			OR = {
+				owns_state = 28
+				FRA = { has_capitulated = yes }
+				FRA = { is_subject_of = ROOT }
+				NOT = { #france doesn't exist
+					any_country = {
+						original_tag = FRA
+						exists = yes
+					}
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				28 = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+
+		complete_effect = {
+				28 = { set_state_name = "Elsass-Lothringen" }
+				set_province_name = { id = 9503 name = "Straßburg" }
+				set_province_name = { id = 678 name = "Mülhausen" }
+				FRA = {
+					country_event = { id = wtt_germany.63 }
+				}
+		}
+	}
 }
