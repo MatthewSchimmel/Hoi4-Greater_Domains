@@ -1,0 +1,84 @@
+﻿###########################
+###### German Events ######
+###########################
+
+add_namespace = greaterGermany
+# Proclaim Greater German Reich completed
+country_event = {
+	id = greaterGermany.1
+	title = greaterGermany.1.t
+	desc = greaterGermany.1.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = greaterGermany.1.a #Greater German Reich
+		ai_chance = {factor = 100}
+	}
+	option = {
+		name = greaterGermany.1.b #Germany
+		ai_chance = {factor = 0}
+	}
+	option = {
+		name = greaterGermany.1.c #Deutsches Reich
+		ai_chance = {factor = 0}
+	}
+	option = {
+		name = greaterGermany.1.d #Großgermanisches Reich
+		ai_chance = {factor = 0}
+	}
+}
+
+# South Tyrol Agreement completed
+country_event = { #Italians compromise
+	id = greaterGermany.3
+	title = greaterGermany.3.t
+	desc = greaterGermany.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = greaterGermany.3.a #Accept Deal
+		ai_chance = {factor = 100}
+		add_manpower = 50000
+	}
+	option = {
+		name = greaterGermany.3.b #Reject Deal
+		ai_chance = {factor = 0}
+		add_political_power = -25
+		add_state_claim = 39
+		ITA = { country_event = { id = ggrItaly.2 } }
+		hidden_effect = {
+			add_named_threat = { threat = 2 name = generic.15.t }
+		}
+	}
+}
+
+country_event = { #Italians refuse compromise
+	id = greaterGermany.4
+	title = greaterGermany.4.t
+	desc = greaterGermany.4.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = { #Do nothing
+		name = greaterGermany.4.a
+		ai_chance = {factor = 100}
+	}
+	option = { #Get claim
+		name = greaterGermany.4.b
+		ai_chance = {factor = 0}
+		create_wargoal = {
+			type = take_state_focus
+			target = ITA
+			expire = 375
+			generator = { 39 }
+		}
+		hidden_effect = {
+			add_named_threat = { threat = 2 name = generic.15.t }
+		}
+	}
+}

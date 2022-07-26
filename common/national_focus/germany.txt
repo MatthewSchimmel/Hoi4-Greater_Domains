@@ -4834,8 +4834,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			#event: Pressure on South Tyrol
+			ITA = { country_event = { id = ggrItaly.1 } }
 		}
 	}
 

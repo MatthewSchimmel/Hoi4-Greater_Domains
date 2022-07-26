@@ -1,0 +1,65 @@
+﻿###########################
+###### Italian Events #####
+###########################
+
+add_namespace = ggrItaly
+
+# South Tyrol completed
+country_event = { #Germany pressures for South Tyrol
+	id = ggrItaly.1
+	title = ggrItaly.1.t
+	desc = ggrItaly.1.d
+	picture = GFX_report_event_germany_politician_handshake
+
+	is_triggered_only = yes
+
+	option = { #compromise
+		name = ggrItaly.1.b
+		ai_chance = {factor = 100}
+		GER = { country_event = { id = greaterGermany.3} }
+	}
+	option = { #Refuse compromise
+		name = ggrItaly.1.a
+		ai_chance = {factor = 0}
+		GER = {
+			add_opinion_modifier = {
+    		target = ITA
+    		modifier = large_decrease
+			}
+		}
+		GER = { country_event = { id = greaterGermany.4} }
+		custom_effect_tooltip = "Germany may gain war goal on Italy"
+	}
+}
+# Germany Rejects South Tyrol compromise
+country_event = {
+	id = ggrItaly.2
+	title = ggrItaly.2.t
+	desc = ggrItaly.2.d
+	picture = GFX_report_event_vienna_award_negotiations
+
+	is_triggered_only = yes
+
+	option = {
+		name = ggrItaly.2.a #Accept Result
+		ai_chance = {factor = 100}
+			add_opinion_modifier = {
+    		target = GER
+    		modifier = small_decrease
+			}
+	}
+}
+# Germany Accepts South Tyrol compromise
+country_event = {
+	id = ggrItaly.3
+	title = ggrItaly.3.t
+	desc = ggrItaly.3.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = ggrItaly.3.a #Accept Result
+		ai_chance = {factor = 100}
+	}
+}
