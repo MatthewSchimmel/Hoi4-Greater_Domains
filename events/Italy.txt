@@ -24,11 +24,22 @@ country_event = { #Germany pressures for South Tyrol
 		GER = {
 			add_opinion_modifier = {
     		target = ITA
-    		modifier = large_decrease
+    		modifier = medium_decrease
 			}
+			country_event = { id = greaterGermany.4}
 		}
-		GER = { country_event = { id = greaterGermany.4} }
 		custom_effect_tooltip = "Germany may gain war goal on Italy"
+	}
+	option = { #gift_the_state
+		name = ggrItaly.1.c
+		ai_chance = {factor = 0}
+		GER = {
+			add_opinion_modifier = {
+    		target = ITA
+    		modifier = huge_increase
+			}
+			country_event = { id = greaterGermany.2}
+		}
 	}
 }
 # Germany Rejects South Tyrol compromise

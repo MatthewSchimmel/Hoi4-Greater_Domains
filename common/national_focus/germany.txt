@@ -4787,13 +4787,13 @@ focus_tree = {
 		prerequisite = { focus = GER_anschluss }
 		icon = GFX_goal_generic_cavalry
 		available = {
-			country_exists = ITA
 			NOT = { has_war_with = ITA }
+			ITA = {is_free_or_subject_of_root = yes}
 			has_army_manpower = { size > 1000000 } #105 div
 		}
+
 		bypass = {
 			OR = {
-				ITA = { is_puppet_of = GER }
 				39 = {
 					CONTROLLER = {
 						has_war_with = GER

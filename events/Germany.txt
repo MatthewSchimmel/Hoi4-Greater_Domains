@@ -30,7 +30,24 @@ country_event = {
 	}
 }
 
-# South Tyrol Agreement completed
+country_event = { #Italians gift S.Tyrol
+	id = greaterGermany.2
+	title = greaterGermany.2.t
+	desc = greaterGermany.2.d
+	picture = GFX_report_event_german_italian_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = greaterGermany.3.a #Accept Deal
+		ai_chance = {factor = 100}
+		transfer_state = 39
+		39 = {
+			set_compliance = 50
+		}
+	}
+}
+
 country_event = { #Italians compromise
 	id = greaterGermany.3
 	title = greaterGermany.3.t
