@@ -4782,34 +4782,13 @@ focus_tree = {
 	}
 
 		focus = {
-		id = GER_craft_scandinavian_union
-		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
-		icon = GFX_goal_generic_alliance
-		available = {
-		}
-		cancel = {
-		}
-		cancel_if_invalid = yes
-		x = 3
-		y = 1
-		relative_position_id = GER_proclaim_greater_germanic_reich
-
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-
-		}
-	}
-
-		focus = {
 		id = GER_south_tyrol_agreement
 		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
 		prerequisite = { focus = GER_anschluss }
 		icon = GFX_goal_generic_cavalry
 		available = {
 			country_exists = ITA
+			NOT = { has_war_with = ITA }
 			has_army_manpower = { size > 1000000 } #105 div
 		}
 		bypass = {
