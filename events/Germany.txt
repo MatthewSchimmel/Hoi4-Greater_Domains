@@ -8,13 +8,14 @@ country_event = {
 	id = greaterGermany.1
 	title = greaterGermany.1.t
 	desc = greaterGermany.1.d
-	picture = GFX_report_event_fascist_gathering
+	picture = GFX_report_event_germany_victory
 
 	is_triggered_only = yes
 
 	option = {
 		name = greaterGermany.1.a #Greater German Reich
 		ai_chance = {factor = 100}
+		set_cosmetic_tag = GER_greater_german_reich_fascism
 	}
 	option = {
 		name = greaterGermany.1.b #Germany
@@ -97,5 +98,27 @@ country_event = { #Italians refuse compromise
 		hidden_effect = {
 			add_named_threat = { threat = 2 name = generic.15.t }
 		}
+	}
+}
+
+country_event = {
+	id = greaterGermany.5
+	title = greaterGermany.5.t
+	desc = greaterGermany.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = greaterGermany.5.a #Denmark
+		ai_chance = {factor = 0}
+	}
+	option = {
+		name = greaterGermany.5.b #Norway
+		ai_chance = {factor = 100}
+	}
+	option = {
+		name = greaterGermany.5.c #Sweden
+		ai_chance = {factor = 0}
 	}
 }

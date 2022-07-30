@@ -4557,7 +4557,7 @@ focus_tree = {
 	####### Greater Germanic Reich Mod #########
 	############################################
 
-		focus = {
+	focus = {
 		id = GER_proclaim_greater_germanic_reich
 		prerequisite = { focus = GER_rhineland }
 		icon = GFX_focus_ger_reichskommisariats
@@ -4584,7 +4584,7 @@ focus_tree = {
 		}
 	}
 
-		focus = {
+	focus = {
 		id = GER_renationalize_switzerland
 		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
 		icon = GFX_goal_generic_position_armies
@@ -4710,7 +4710,6 @@ focus_tree = {
 		}
 	}
 
-
 	focus = {
 		id = GER_empower_belgian_seperatists
 		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
@@ -4778,10 +4777,9 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
 
-		focus = {
+	focus = {
 		id = GER_south_tyrol_agreement
 		prerequisite = { focus = GER_proclaim_greater_germanic_reich }
 		prerequisite = { focus = GER_anschluss }
@@ -4816,6 +4814,29 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			ITA = { country_event = { id = ggrItaly.1 } }
+		}
+	}
+
+	focus = {
+		id = GER_craft_scandinavian_union
+		prerequisite = { focus = GER_form_the_reichskommissariats }
+		icon = GFX_goal_generic_alliance
+		available = {
+		}
+		cancel = {
+		}
+		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = GER_form_the_reichskommissariats
+
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = "Creates puppet state Scandinavian Union"
+			ROOT = {country_event = { id = greaterGermany.5}}
 		}
 	}
 
