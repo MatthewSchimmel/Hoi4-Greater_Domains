@@ -15,19 +15,34 @@ country_event = {
 	option = {
 		name = greaterGermany.1.a #Greater German Reich
 		ai_chance = {factor = 100}
-		set_cosmetic_tag = GER_greater_german_reich_fascism
+		GER = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_greater_german_reich
+		}
 	}
 	option = {
 		name = greaterGermany.1.b #Germany
 		ai_chance = {factor = 0}
+		GER = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_germany_fascism
+		}
 	}
 	option = {
 		name = greaterGermany.1.c #Deutsches Reich
 		ai_chance = {factor = 0}
+		GER = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_deutsches_reich_fascism
+		}
 	}
 	option = {
 		name = greaterGermany.1.d #Großgermanisches Reich
 		ai_chance = {factor = 0}
+		GER = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_grossgermanisches_reich_fascism
+		}
 	}
 }
 
