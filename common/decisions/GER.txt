@@ -2304,5 +2304,6 @@ GER_Volkersintegration = {
 			FRA = {
 				country_event = { id = wtt_germany.63 }
 			}
+		}
 	}
 }
