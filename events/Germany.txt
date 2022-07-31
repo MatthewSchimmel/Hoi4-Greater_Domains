@@ -2,7 +2,7 @@
 # German Events
 ###########################
 
-add_namespace = germany
+add_namespace = greaterGermany
 
 # Proclaim Greater German Reich completed
 country_event = {
@@ -138,6 +138,8 @@ country_event = {
 		ai_chance = {factor = 0}
 	}
 }
+
+add_namespace = germany
 
 # Austrian Anschluss Completed
 country_event = {
