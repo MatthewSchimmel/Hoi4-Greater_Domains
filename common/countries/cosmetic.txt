@@ -1,9 +1,9 @@
-GER_deutsches_reich_reich_fascism = {
-	color = rgb { 160 160 160 }
+GER_deutsches_reich_fascism = {
+	color = rgb { 145 135 135 }
 	color_ui = rgb { 115 115 115 }
 }
 
-GER_großgermanisches_reich_fascism = {
+GER_grossgermanisches_reich_fascism = {
 	color = rgb { 40 40 40 }
 	color_ui = rgb { 115 115 115 }
 }
