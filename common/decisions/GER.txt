@@ -1789,8 +1789,7 @@ GER_Volkersintegration = {
 			has_full_control_of_state = 85
 			85 = {
 				resistance < 25
-				#compliance > 60
-				}
+			}
 			if = {
 				limit = {
 					POL = { has_completed_focus = POL_ban_the_nazi_party }
@@ -1810,7 +1809,7 @@ GER_Volkersintegration = {
 		visible = {
 			85 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -1852,7 +1851,7 @@ GER_Volkersintegration = {
 		visible = {
 			807 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -1898,7 +1897,7 @@ GER_Volkersintegration = {
 		visible = {
 			86 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -1943,8 +1942,10 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			762 = {
-				NOT = {is_core_of = ROOT}
-				controller = GER
+				AND = {
+					is_controlled_by = ROOT
+					NOT = {is_core_of = ROOT}
+				}
 			}
 		}
 
@@ -1990,7 +1991,7 @@ GER_Volkersintegration = {
 		visible = {
 			188 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2031,7 +2032,7 @@ GER_Volkersintegration = {
 		visible = {
 			153 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2072,7 +2073,7 @@ GER_Volkersintegration = {
 		visible = {
 			152 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2113,7 +2114,7 @@ GER_Volkersintegration = {
 		visible = {
 			4 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2154,7 +2155,7 @@ GER_Volkersintegration = {
 		visible = {
 			69 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2198,7 +2199,7 @@ GER_Volkersintegration = {
 		visible = {
 			74 = {
 				NOT = {is_core_of = ROOT}
-				controller = GER
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2228,9 +2229,9 @@ GER_Volkersintegration = {
 			}
 		}
 		visible = {
-			NOT = {
-				8 = {is_core_of = ROOT}
-				controller = GER
+			8 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -2243,15 +2244,15 @@ GER_Volkersintegration = {
 
 		complete_effect = {
 			add_state_core = 8
-				if = {
-					limit = {
-						NOT = { owns_state = 8 }
-					}
-					transfer_state = 8
+			if = {
+				limit = {
+					NOT = { owns_state = 8 }
 				}
-				LUX = {
-					country_event = { id = wtt_germany.64 }
-				}
+				transfer_state = 8
+			}
+			LUX = {
+				country_event = { id = wtt_germany.64 }
+			}
 		}
 	}
 
@@ -2276,9 +2277,9 @@ GER_Volkersintegration = {
 			}
 		}
 		visible = {
-			NOT = {
-				28 = {is_core_of = ROOT}
-				controller = GER
+			28 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
 			}
 		}
 
