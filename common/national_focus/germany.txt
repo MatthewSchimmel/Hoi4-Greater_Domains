@@ -4720,17 +4720,27 @@ focus_tree = {
 				has_government = fascism
 				has_government = neutrality
 			}
-			34 = {
-				is_fully_controlled_by = ROOT
-				has_active_resistance = no
-				compliance > 60
+			OR = {
+				AND = { #has control and compliance on belgian states
+					34 = {
+						is_fully_controlled_by = ROOT
+						has_active_resistance = no
+						compliance > 60
+					}
+					35 = {
+						is_fully_controlled_by = ROOT
+						has_active_resistance = no
+						compliance > 60
+					}
+				}
+				BEL = {
+					is_puppet_of = GER
+					has_autonomy_state = autonomy_integrated_puppet
+					has_full_control_of_state = 6
+					has_full_control_of_state = 34
+				}
 			}
-			35 = {
-				is_fully_controlled_by = ROOT
-				has_active_resistance = no
-				compliance > 60
-			}
-			}
+		}
 		cancel_if_invalid = yes
 		x = 1
 		y = 1
@@ -4742,7 +4752,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			FRA = {add_state_core = 34}
+			IF = {
+				limit = { FRA = {is_puppet_of = GER}}
+				FRA = {
+					transfer_state = 34
+				}
+			}
 			HOL = {add_state_core = 6}
+			IF = {
+				limit = { HOL = {is_puppet_of = GER}}
+				HOL = {
+					transfer_state = 6
+				}
+			}
 				if = {
 					limit = {
 						ROOT = {
