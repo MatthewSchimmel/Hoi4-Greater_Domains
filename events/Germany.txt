@@ -128,14 +128,35 @@ country_event = {
 	option = {
 		name = greaterGermany.5.a #Denmark
 		ai_chance = {factor = 0}
-	}
-	option = {
-		name = greaterGermany.5.b #Norway
-		ai_chance = {factor = 100}
+		DEN = {
+			form_scandinavia = yes
+			GER = {
+				release = PREV
+				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+			}
+		}
 	}
 	option = {
 		name = greaterGermany.5.c #Sweden
 		ai_chance = {factor = 0}
+		SWE = {
+			form_scandinavia = yes
+			GER = {
+				release = PREV
+				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	option = {
+		name = greaterGermany.5.b #Norway
+		ai_chance = {factor = 100}
+		NOR = {
+			form_scandinavia = yes
+			GER = {
+				release = PREV
+				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+			}
+		}
 	}
 }
 

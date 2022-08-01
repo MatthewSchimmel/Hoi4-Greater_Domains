@@ -4822,6 +4822,38 @@ focus_tree = {
 		prerequisite = { focus = GER_form_the_reichskommissariats }
 		icon = GFX_goal_generic_alliance
 		available = {
+			is_subject = no
+			# Norway
+			custom_trigger_tooltip = {
+				tooltip = form_country_norway_required_states_tt
+				controls_state = 110
+				controls_state = 142
+				controls_state = 143
+				controls_state = 144
+			}
+			# Sweden
+			custom_trigger_tooltip = {
+				tooltip = form_country_sweden_required_states_tt
+				controls_state = 124
+				controls_state = 138
+				controls_state = 139
+				controls_state = 140
+				controls_state = 141
+				controls_state = 38
+				controls_state = 666
+			}
+			# Denmark / European Mainland
+			custom_trigger_tooltip = {
+				tooltip = form_scandinavia_denmark_required_states_tt
+				controls_state = 37
+				controls_state = 99
+			}
+			custom_trigger_tooltip = {
+				tooltip = "scandinavia_already_exists_tt"
+				NOT = {
+					has_global_flag = form_scandinavia_flag
+				}
+			}
 		}
 		cancel = {
 		}
@@ -4835,8 +4867,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			custom_effect_tooltip = "Creates puppet state Scandinavian Union"
-			ROOT = {country_event = { id = greaterGermany.5}}
+			custom_effect_tooltip = "Forms Scandinavian subject state"
+			GER = {country_event = { id = greaterGermany.5}}
 		}
 	}
 
@@ -4845,7 +4877,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_generic_build_navy
-		x = 5
+		x = 3
 		y = 0
 		relative_position_id = GER_proclaim_greater_germanic_reich
 		cost = 5
@@ -5076,7 +5108,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet focus = GER_accept_british_naval_dominance }
-		x = -2
+		x = -1
 		y = 3
 		relative_position_id = GER_naval_effort
 		cost = 10
@@ -6162,7 +6194,7 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 		}
-		x = 52
+		x = 48
 		y = 0
 		cost = 10
 		ai_will_do = {
