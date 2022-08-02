@@ -4647,7 +4647,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			ITA = {add_state_core = 835}
+			IF = {
+				limit = { ITA = {is_puppet_of = GER}}
+				ITA = {
+					transfer_state = 835
+				}
+			}
 			FRA = {add_state_core = 836}
+			IF = {
+				limit = { FRA = {is_puppet_of = GER}}
+				FRA = {
+					transfer_state = 836
+				}
+			}
 			set_province_name = { id = 6666 name = "Genève" }
 			add_state_core = 3
 			3 = { set_state_name = "Mittelschweiz"}
@@ -4819,7 +4831,7 @@ focus_tree = {
 						has_war_with = GER
 					}
 				}
-				GER = { controls_state = 39 }
+				owns_state = 39
 			}
 		}
 		cancel = {
@@ -4884,7 +4896,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_form_the_reichskommissariats
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}

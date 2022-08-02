@@ -56,12 +56,11 @@ country_event = { #Italians gift S.Tyrol
 	is_triggered_only = yes
 
 	option = {
-		name = greaterGermany.3.a #Accept Deal
+		name = greaterGermany.2.a #Accept Deal
 		ai_chance = {factor = 100}
+		remove_state_claim = 39
+		add_state_core = 39
 		transfer_state = 39
-		39 = {
-			set_compliance = 50
-		}
 	}
 }
 
@@ -195,6 +194,19 @@ country_event = {
 			if = {
 				limit = { is_owned_by = AUS }
 				add_core_of = GER
+			}
+		}
+		39 = {
+			if = {
+				limit = {
+					OR = {
+						is_owned_by = AUS
+						is_owned_by = GER
+					}
+				}
+				add_core_of = GER
+			} else = {
+				add_claim_by = GER
 			}
 		}
 		AUS = {
