@@ -111,6 +111,7 @@ GER_Volkersintegration = {
 		state = 152
 		state = 153
 		state = 4
+		state = 39
 		name = Examine_potential_cores
 		zoom = 300
 	}
