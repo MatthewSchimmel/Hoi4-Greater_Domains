@@ -8,7 +8,7 @@ add_namespace = greaterGermany
 country_event = {
 	id = greaterGermany.1
 	title = greaterGermany.1.t
-	desc = greaterGermany.1.d
+	desc = greaterGermany.1.desc
 	picture = GFX_report_event_germany_victory
 
 	is_triggered_only = yes
