@@ -28,7 +28,7 @@ GER_Volkersintegration = {
 						POL = {owns_state = 85}
 					}
 				}
-					POL = { has_capitulated = yes }
+				POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -70,7 +70,7 @@ GER_Volkersintegration = {
 						POL = {owns_state = 807}
 					}
 				}
-					POL = { has_capitulated = yes }
+				POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -116,7 +116,7 @@ GER_Volkersintegration = {
 						POL = {owns_state = 86}
 					}
 				}
-					POL = { has_capitulated = yes }
+				POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -162,7 +162,7 @@ GER_Volkersintegration = {
 						POL = {owns_state = 762}
 					}
 				}
-					POL = { has_capitulated = yes }
+				POL = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -210,7 +210,7 @@ GER_Volkersintegration = {
 						LIT = {owns_state = 188}
 					}
 				}
-					LIT = { has_capitulated = yes }
+				LIT = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -252,7 +252,7 @@ GER_Volkersintegration = {
 						AUS = {owns_state = 153}
 					}
 				}
-					AUS = { has_capitulated = yes }
+				AUS = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -294,7 +294,7 @@ GER_Volkersintegration = {
 						AUS = {owns_state = 152}
 					}
 				}
-					AUS = { has_capitulated = yes }
+				AUS = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -336,7 +336,7 @@ GER_Volkersintegration = {
 						AUS = {owns_state = 4}
 					}
 				}
-					AUS = { has_capitulated = yes }
+				AUS = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -421,7 +421,7 @@ GER_Volkersintegration = {
 						CZE = {owns_state = 69}
 					}
 				}
-					CZE = { has_capitulated = yes }
+				CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -466,7 +466,7 @@ GER_Volkersintegration = {
 						CZE = {owns_state = 74}
 					}
 				}
-					CZE = { has_capitulated = yes }
+				CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -606,7 +606,7 @@ HUN_integration = {
 						YUG = {owns_state = 73}
 					}
 				}
-					YUG = { has_capitulated = yes }
+				YUG = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -647,7 +647,7 @@ HUN_integration = {
 						YUG = {owns_state = 664}
 					}
 				}
-					YUG = { has_capitulated = yes }
+				YUG = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -688,7 +688,7 @@ HUN_integration = {
 						ROM = {owns_state = 76}
 					}
 				}
-					ROM = { has_capitulated = yes }
+				ROM = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -729,7 +729,7 @@ HUN_integration = {
 						ROM = {owns_state = 84}
 					}
 				}
-					ROM = { has_capitulated = yes }
+				ROM = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -770,7 +770,7 @@ HUN_integration = {
 						ROM = {owns_state = 83}
 					}
 				}
-					ROM = { has_capitulated = yes }
+				ROM = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -811,7 +811,7 @@ HUN_integration = {
 						ROM = {owns_state = 82}
 					}
 				}
-					ROM = { has_capitulated = yes }
+				ROM = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -852,7 +852,7 @@ HUN_integration = {
 						YUG = {owns_state = 764}
 					}
 				}
-					YUG = { has_capitulated = yes }
+				YUG = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -893,7 +893,7 @@ HUN_integration = {
 						YUG = {owns_state = 45}
 					}
 				}
-					YUG = { has_capitulated = yes }
+				YUG = { has_capitulated = yes }
 			}
 		}
 		visible = {
@@ -912,6 +912,669 @@ HUN_integration = {
 
 		complete_effect = {
 			add_state_core = 45
+		}
+	}
+}
+
+#################
+### BULGARIA ####
+#################
+
+BUL_integration = {
+	BUL_core_dobrudja = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 77 }
+		#CONDITIONS
+		available = {
+			77 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROM
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = ROM
+						ROM = {owns_state = 77}
+					}
+				}
+				ROM = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			77 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 77
+		}
+	}
+
+	BUL_core_Serbia = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 803 }
+		#CONDITIONS
+		available = {
+			803 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = HUN
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = YUG
+						YUG = {owns_state = 803}
+					}
+				}
+				YUG = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			803 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 803
+		}
+	}
+
+	BUL_core_Macedonia = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 106 }
+		#CONDITIONS
+		available = {
+			106 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = HUN
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = YUG
+						YUG = {owns_state = 106}
+					}
+				}
+				YUG = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			106 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 106
+		}
+	}
+
+	BUL_core_Thrace = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 184 }
+		#CONDITIONS
+		available = {
+			184 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = HUN
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = GRE
+						GRE = {owns_state = 184}
+					}
+				}
+				GRE = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			184 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 184
+		}
+	}
+
+	BUL_core_Edirne = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 341 }
+		#CONDITIONS
+		available = {
+			341 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = HUN
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = TUR
+						TUR = {owns_state = 341}
+					}
+				}
+				TUR = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			341 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 341
+		}
+	}
+}
+SOV_integration = {
+	SOV_core_sBessab = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 766 }
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_claim_on_bessarabia
+			766 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROM
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = ROM
+						ROM = {owns_state = 776}
+					}
+				}
+				ROM = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			766 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 25
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 766
+		}
+	}
+
+	SOV_core_Bessab = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 78 }
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_claim_on_bessarabia
+			78 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROM
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = ROM
+						ROM = {owns_state = 78}
+					}
+				}
+				ROM = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			78 = {
+				NOT = {is_core_of = ROOT}
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 78
+		}
+	}
+
+	SOV_core_Ukraine = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_claims_on_poland
+			89 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			91 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			93 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						OR = {
+							POL = {owns_state = 89}
+							POL = {owns_state = 91}
+							POL = {owns_state = 93}
+						}
+					}
+				}
+				POL = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 89
+			add_state_core = 91
+			add_state_core = 93
+		}
+	}
+
+	SOV_core_Belarus = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_claims_on_poland
+			94 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			95 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			96 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = POL
+						OR = {
+							POL = {owns_state = 94}
+							POL = {owns_state = 95}
+							POL = {owns_state = 96}
+						}
+					}
+				}
+				POL = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 94
+			add_state_core = 95
+			add_state_core = 96
+		}
+	}
+	SOV_core_Lituania = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_baltic_security
+			815 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			11 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			814 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			189 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = LIT
+						OR = {
+							LIT = {
+								owns_state = 815
+								owns_state = 11
+								owns_state = 814
+								owns_state = 189
+								owns_state = 188
+							}
+						}
+					}
+				}
+				LIT = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 815
+			add_state_core = 11
+			add_state_core = 814
+			add_state_core = 189
+			add_state_core = 188
+		}
+	}
+
+	SOV_core_Lativa = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_baltic_security
+			810 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			12 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			808 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			809 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			190 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = LAT
+						OR = {
+							LAT = {
+								owns_state = 810
+								owns_state = 12
+								owns_state = 808
+								owns_state = 809
+								owns_state = 190
+							}
+						}
+					}
+				}
+				LAT = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 810
+			add_state_core = 12
+			add_state_core = 808
+			add_state_core = 809
+			add_state_core = 190
+		}
+	}
+
+	SOV_core_Estonia = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_baltic_security
+			813 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			191 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			13 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			812 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			811 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = EST
+						OR = {
+							EST = {
+								owns_state = 813
+								owns_state = 191
+								owns_state = 13
+								owns_state = 812
+								owns_state = 811
+							}
+						}
+					}
+				}
+				EST = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 813
+			add_state_core = 191
+			add_state_core = 13
+			add_state_core = 812
+			add_state_core = 811
+		}
+	}
+
+	SOV_core_Finland = {
+		icon = GFX_decision_icon_default
+		#CONDITIONS
+		available = {
+			has_completed_focus = SOV_secure_leningrad
+			111 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			149 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			150 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			148 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			722 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			147 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			146 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					OR = {
+						FIN = {
+							owns_state = 111
+							owns_state = 149
+							owns_state = 148
+							owns_state = 150
+							owns_state = 722
+						}
+					}
+				}
+				FIN = { has_capitulated = yes }
+			}
+		}
+		visible = {}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 100
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 111
+			add_state_core = 149
+			add_state_core = 148
+			add_state_core = 150
+			add_state_core = 722
+			add_state_core = 147
+			add_state_core = 146
 		}
 	}
 }
