@@ -1,0 +1,68 @@
+#################
+#### GERMANY ####
+#################
+
+GER_Volkersintegration = {
+	allowed = {
+		original_tag = GER
+		is_subject = no
+	}
+	visible = {
+		has_completed_focus = GER_proclaim_greater_germanic_reich
+		ROOT = {
+			is_ai = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+	}
+	visible_when_empty = yes
+	on_map_area = {
+		state = 85
+		state = 86
+		state = 807
+		state = 762
+		state = 69
+		state = 74
+		state = 151
+		state = 3
+		state = 28
+		state = 8
+		state = 188
+		state = 152
+		state = 153
+		state = 4
+		state = 39
+		name = "Examine potential cores"
+		zoom = 300
+	}
+}
+HUN_integration = {
+	allowed = {
+		original_tag = HUN
+		is_subject = no
+	}
+	visible = {
+		ROOT = {
+			is_ai = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+	}
+	visible_when_empty = yes
+	on_map_area = {
+		state = 664
+		state = 73
+		state = 76
+		state = 84
+		state = 83
+		state = 82
+		state = 764
+		state = 45
+		name = "Examine potential cores"
+		zoom = 250
+	}
+}
