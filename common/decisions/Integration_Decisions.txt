@@ -635,6 +635,10 @@ HUN_integration = {
  		targets = { state = 664 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_demand_southern_slovakia
+			}
 			664 = {
 				resistance < 25
 				compliance > 60
@@ -676,6 +680,10 @@ HUN_integration = {
  		targets = { state = 76 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_claim_transylvania
+			}
 			76 = {
 				resistance < 25
 				compliance > 60
@@ -717,6 +725,10 @@ HUN_integration = {
  		targets = { state = 84 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_claim_transylvania
+			}
 			84 = {
 				resistance < 25
 				compliance > 60
@@ -758,6 +770,10 @@ HUN_integration = {
  		targets = { state = 83 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_claim_transylvania
+			}
 			83 = {
 				resistance < 25
 				compliance > 60
@@ -799,6 +815,10 @@ HUN_integration = {
  		targets = { state = 82 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_claim_transylvania
+			}
 			82 = {
 				resistance < 25
 				compliance > 60
@@ -840,6 +860,10 @@ HUN_integration = {
  		targets = { state = 764 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_march_to_the_shore
+			}
 			764 = {
 				resistance < 25
 				compliance > 60
@@ -881,6 +905,10 @@ HUN_integration = {
  		targets = { state = 45 }
 		#CONDITIONS
 		available = {
+			if = {
+				limit = { has_dlc = "Death or Dishonor" }
+				has_completed_focus = HUN_march_to_the_shore
+			}
 			45 = {
 				resistance < 25
 				compliance > 60
@@ -928,6 +956,7 @@ BUL_integration = {
  		targets = { state = 77 }
 		#CONDITIONS
 		available = {
+			NOT = has_dlc = "Battle for the Bosporus"
 			77 = {
 				resistance < 25
 				compliance > 60
@@ -943,6 +972,7 @@ BUL_integration = {
 				ROM = { has_capitulated = yes }
 			}
 		}
+
 		visible = {
 			77 = {
 				is_controlled_by = ROOT
@@ -969,6 +999,7 @@ BUL_integration = {
  		targets = { state = 803 }
 		#CONDITIONS
 		available = {
+			NOT = has_dlc = "Battle for the Bosporus"
 			803 = {
 				resistance < 25
 				compliance > 60
@@ -1010,6 +1041,7 @@ BUL_integration = {
  		targets = { state = 106 }
 		#CONDITIONS
 		available = {
+			NOT = has_dlc = "Battle for the Bosporus"
 			106 = {
 				resistance < 25
 				compliance > 60
@@ -1044,6 +1076,48 @@ BUL_integration = {
 		}
 	}
 
+	BUL_core_CentralMacedonia = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 731 }
+		#CONDITIONS
+		available = {
+			NOT = has_dlc = "Battle for the Bosporus"
+			731 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = HUN
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = GRE
+						GRE = {owns_state = 731}
+					}
+				}
+				GRE = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			731 = {
+				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 731
+		}
+	}
+
 	BUL_core_Thrace = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -1051,6 +1125,7 @@ BUL_integration = {
  		targets = { state = 184 }
 		#CONDITIONS
 		available = {
+			NOT = has_dlc = "Battle for the Bosporus"
 			184 = {
 				resistance < 25
 				compliance > 60
@@ -1084,6 +1159,7 @@ BUL_integration = {
 			add_state_core = 184
 		}
 	}
+
 
 	BUL_core_Edirne = {
 		icon = GFX_decision_icon_default

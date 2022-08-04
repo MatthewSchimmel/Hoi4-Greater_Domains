@@ -44,6 +44,8 @@
  BUL_core_Serbia_desc:0 "Adds Southern Serbia as a core state."
  BUL_core_Macedonia:0 "Incorporate Macedonia"
  BUL_core_Macedonia_desc:0 "Adds Macedonia as a core state."
+ BUL_core_CentralMacedonia:0 "Incorporate Central Macedonia"
+ BUL_core_CentralMacedonia_desc:0 "Adds Central Macedonia as a core state."
  BUL_core_Thrace:0 "Incorporate Thrace"
  BUL_core_Thrace_desc:0 "Adds Thrace as a core state."
  BUL_core_Edirne:0 "Incorporate Edirne"
