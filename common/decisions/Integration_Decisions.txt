@@ -33,8 +33,8 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			85 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -75,8 +75,8 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			807 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -121,8 +121,8 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			86 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -216,8 +216,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_demand_memel
 			188 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -258,8 +258,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_anschluss
 			153 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -300,8 +300,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_anschluss
 			152 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -342,8 +342,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_anschluss
 			4 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -385,8 +385,8 @@ GER_Volkersintegration = {
 			has_completed_focus = GER_anschluss
 			#ADD extra flag for no agreement
 			39 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -427,8 +427,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_demand_sudetenland
 			69 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -472,8 +472,8 @@ GER_Volkersintegration = {
 		visible = {
 			has_completed_focus = GER_demand_sudetenland
 			74 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -504,8 +504,8 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			8 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -552,8 +552,8 @@ GER_Volkersintegration = {
 		}
 		visible = {
 			28 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -611,8 +611,8 @@ HUN_integration = {
 		}
 		visible = {
 			73 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -652,8 +652,8 @@ HUN_integration = {
 		}
 		visible = {
 			664 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -693,8 +693,8 @@ HUN_integration = {
 		}
 		visible = {
 			76 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -734,8 +734,8 @@ HUN_integration = {
 		}
 		visible = {
 			84 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -775,8 +775,8 @@ HUN_integration = {
 		}
 		visible = {
 			83 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -816,8 +816,8 @@ HUN_integration = {
 		}
 		visible = {
 			82 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -857,8 +857,8 @@ HUN_integration = {
 		}
 		visible = {
 			764 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -898,8 +898,8 @@ HUN_integration = {
 		}
 		visible = {
 			45 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -945,8 +945,8 @@ BUL_integration = {
 		}
 		visible = {
 			77 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -986,8 +986,8 @@ BUL_integration = {
 		}
 		visible = {
 			803 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -1027,8 +1027,8 @@ BUL_integration = {
 		}
 		visible = {
 			106 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -1068,8 +1068,8 @@ BUL_integration = {
 		}
 		visible = {
 			184 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -1109,8 +1109,8 @@ BUL_integration = {
 		}
 		visible = {
 			341 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -1126,6 +1126,7 @@ BUL_integration = {
 		}
 	}
 }
+
 SOV_integration = {
 	SOV_core_sBessab = {
 		icon = GFX_decision_icon_default
@@ -1152,8 +1153,8 @@ SOV_integration = {
 		}
 		visible = {
 			766 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
@@ -1194,8 +1195,8 @@ SOV_integration = {
 		}
 		visible = {
 			78 = {
-				NOT = {is_core_of = ROOT}
 				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
 			}
 		}
 
