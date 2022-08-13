@@ -13,7 +13,7 @@ GER_Volkersintegration = {
 			has_completed_focus = GER_danzig_or_war
 			85 = {
 				resistance < 25
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -61,7 +61,7 @@ GER_Volkersintegration = {
 			807 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -107,7 +107,7 @@ GER_Volkersintegration = {
 			86 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -153,7 +153,7 @@ GER_Volkersintegration = {
 			762 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -201,7 +201,7 @@ GER_Volkersintegration = {
 			188 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -243,7 +243,7 @@ GER_Volkersintegration = {
 			153 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -285,7 +285,7 @@ GER_Volkersintegration = {
 			152 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -327,7 +327,7 @@ GER_Volkersintegration = {
 			4 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -369,7 +369,7 @@ GER_Volkersintegration = {
 			39 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = GER
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -409,10 +409,10 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_demand_sudetenland
-			has_full_control_of_state = 69
 			69 = {
 				resistance < 25
 				compliance > 60
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -454,10 +454,10 @@ GER_Volkersintegration = {
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_demand_sudetenland
-			has_full_control_of_state = 74
 			74 = {
 				resistance < 25
 				compliance > 60
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -597,7 +597,7 @@ HUN_integration = {
 			73 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -642,7 +642,7 @@ HUN_integration = {
 			664 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -687,7 +687,7 @@ HUN_integration = {
 			76 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -732,7 +732,7 @@ HUN_integration = {
 			84 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -777,7 +777,7 @@ HUN_integration = {
 			83 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -822,7 +822,7 @@ HUN_integration = {
 			82 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -867,7 +867,7 @@ HUN_integration = {
 			764 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -912,7 +912,7 @@ HUN_integration = {
 			45 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -960,7 +960,7 @@ BUL_integration = {
 			77 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = ROM
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1003,7 +1003,7 @@ BUL_integration = {
 			803 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1045,7 +1045,7 @@ BUL_integration = {
 			106 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1087,7 +1087,7 @@ BUL_integration = {
 			731 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1129,7 +1129,7 @@ BUL_integration = {
 			184 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1171,7 +1171,7 @@ BUL_integration = {
 			341 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1215,7 +1215,7 @@ SOV_integration = {
 			766 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = ROM
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1257,7 +1257,7 @@ SOV_integration = {
 			78 = {
 				resistance < 25
 				compliance > 60
-				is_fully_controlled_by = ROM
+				is_fully_controlled_by = ROOT
 			}
 			if = {
 				limit = {
@@ -1580,41 +1580,14 @@ SOV_integration = {
 		}
 	}
 
-	SOV_core_Finland = {
+	SOV_core_karelia = {
 		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 146 }
 		#CONDITIONS
 		available = {
 			has_completed_focus = SOV_secure_leningrad
-			111 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			149 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			150 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			148 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			722 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			147 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
 			146 = {
 				resistance < 25
 				compliance > 60
@@ -1622,36 +1595,31 @@ SOV_integration = {
 			}
 			if = {
 				limit = {
-					OR = {
-						FIN = {
-							owns_state = 111
-							owns_state = 149
-							owns_state = 148
-							owns_state = 150
-							owns_state = 722
-						}
+					AND = {
+						country_exists = ROM
+						ROM = {owns_state = 776}
 					}
 				}
-				FIN = { has_capitulated = yes }
+				ROM = { has_capitulated = yes }
 			}
 		}
-		visible = {}
+		visible = {
+			146 = {
+				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
+			}
+		}
 
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 100
+		cost = 25
 
 		#EFFECTS
 
 		complete_effect = {
-			add_state_core = 111
-			add_state_core = 149
-			add_state_core = 148
-			add_state_core = 150
-			add_state_core = 722
-			add_state_core = 147
 			add_state_core = 146
+			add_state_core = 147
 		}
 	}
 }

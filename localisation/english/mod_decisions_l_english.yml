@@ -53,7 +53,7 @@
 
  SOV_integration:0 "The Old Russian Lands"
  SOV_integration_desc:0 "The Russian people spread far and wide, poisoned by ideas of self-determination. We will remind them of their proud Russian history."
- SOV_core_sBessab:0 "Integrate "
+ SOV_core_sBessab:0 "Integrate Southern Bessabaria"
  SOV_core_sBessab_desc:0 "Adds Southern Bessabaria as a core state."
  SOV_core_Bessab:0 "Integrate Bessabaria"
  SOV_core_Bessab_desc:0 "Adds Bessabaria as a core state."
@@ -67,5 +67,5 @@
  SOV_core_Lativa_desc:0 "Adds Lativa states as cores."
  SOV_core_Estonia:0 "Integrate Estonia"
  SOV_core_Estonia_desc:0 "Adds Estonian states as cores."
- SOV_core_Finland:0 "Integrate Karelia and Finland"
- SOV_core_Finland_desc:0 "Adds the Karelo-Finnish states as cores."
+ SOV_core_karelia:0 "Integrate Karelia"
+ SOV_core_karelia_desc:0 "Adds Karjala and Salla as cores."

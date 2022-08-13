@@ -132,14 +132,9 @@ SOV_integration = {
 		state = 89
 		state = 78
 		state = 766
-		state = 146
-		state = 111
-		state = 150
-		state = 149
-		state = 148
+		state = 146 #karelian states
 		state = 147
-		state = 722
-		state = 329
+		state = 329 #tanna tuva
 		name = "Examine potential cores"
 		zoom = 250
 	}
