@@ -1,0 +1,23 @@
+state= {
+	id = 838
+	name = "Nordschleswig"
+	manpower = 167000
+	resources = {
+		# nothing
+	}
+
+	state_category = rural
+
+	history = {
+		owner = DEN
+		add_core_of = DEN
+		buildings = {
+			infrastructure = 0
+			industrial_complex = 0
+			air_base = 0
+		}
+	}
+	provinces =	{ 332 11251 }
+
+	local_supplies=0.0
+}

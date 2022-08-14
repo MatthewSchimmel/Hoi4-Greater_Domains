@@ -23,6 +23,7 @@ GER_Volkersintegration = {
 		state = 86
 		state = 807
 		state = 762
+		state = 838
 		state = 69
 		state = 74
 		state = 151
@@ -101,9 +102,6 @@ SOV_integration = {
 	visible = {
 		ROOT = {
 			is_ai = no
-			NOT = {
-				has_government = democracy
-			}
 		}
 	}
 	visible_when_empty = yes

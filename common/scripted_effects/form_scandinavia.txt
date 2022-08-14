@@ -6,17 +6,17 @@ form_scandinavia = {
         limit = {NOT = {tag = NOR}}
     	custom_effect_tooltip = form_country_norway_coring_states_tt
 	    hidden_effect = {
-            110 = { add_core_of = PREV }
-            142 = { add_core_of = PREV }
-            143 = { add_core_of = PREV }
-            144 = { add_core_of = PREV }
+            add_state_core = 110
+            add_state_core = 142
+            add_state_core = 143
+            add_state_core = 144
         }
         custom_effect_tooltip = form_scandinavia_norway_controlling_states_tt
 	    hidden_effect = {
-            110 = { set_state_controller = PREV }
-            142 = { set_state_controller = PREV }
-            143 = { set_state_controller = PREV }
-            144 = { set_state_controller = PREV }
+            110 = { set_state_controller = ROOT }
+            142 = { set_state_controller = ROOT }
+            143 = { set_state_controller = ROOT }
+            144 = { set_state_controller = ROOT }
         }
         IF = {
             limit = {tag = SWE}
@@ -28,23 +28,23 @@ form_scandinavia = {
         limit = {NOT = {tag = SWE}}
 	    custom_effect_tooltip = form_country_sweden_coring_states_tt
         hidden_effect = {
-            124 = { add_core_of = PREV }
-            138 = { add_core_of = PREV }
-            139 = { add_core_of = PREV }
-            140 = { add_core_of = PREV }
-            141 = { add_core_of = PREV }
-            38  = { add_core_of = PREV }
-            666 = { add_core_of = PREV }
+            add_state_core = 124
+            add_state_core = 138
+            add_state_core = 139
+            add_state_core = 140
+            add_state_core = 141
+            add_state_core = 38
+            add_state_core = 666
         }
         custom_effect_tooltip = form_scandinavia_sweden_controlling_states_tt
 	    hidden_effect = {
-            124 = { set_state_controller = PREV }
-            138 = { set_state_controller = PREV }
-            139 = { set_state_controller = PREV }
-            140 = { set_state_controller = PREV }
-            141 = { set_state_controller = PREV }
-            38  = { set_state_controller = PREV }
-            666 = { set_state_controller = PREV }
+            124 = { set_state_controller = ROOT }
+            138 = { set_state_controller = ROOT }
+            139 = { set_state_controller = ROOT }
+            140 = { set_state_controller = ROOT }
+            141 = { set_state_controller = ROOT }
+            38  = { set_state_controller = ROOT }
+            666 = { set_state_controller = ROOT }
         }
     }
 	# Denmark / European Mainland
@@ -52,13 +52,13 @@ form_scandinavia = {
         limit = {NOT = {tag = DEN}}
         custom_effect_tooltip = form_scandinavia_denmark_coring_states_tt
         hidden_effect = {
-            37 = { add_core_of = PREV }
-            99 = { add_core_of = PREV }
+            add_state_core = 37
+            add_state_core = 99
         }
         custom_effect_tooltip = form_scandinavia_denmark_controlling_states_tt
         hidden_effect = {
-            37 = { set_state_controller = PREV }
-            99 = { set_state_controller = PREV }
+            37 = { set_state_controller = ROOT }
+            99 = { set_state_controller = ROOT }
         }
     }
 	hidden_effect = {

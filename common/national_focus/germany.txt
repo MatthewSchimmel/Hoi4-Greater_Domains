@@ -4653,6 +4653,7 @@ focus_tree = {
 					transfer_state = 835
 				}
 			}
+			835 = { set_state_name = "Ticino"}
 			FRA = {add_state_core = 836}
 			IF = {
 				limit = { FRA = {is_puppet_of = GER}}
@@ -4660,6 +4661,7 @@ focus_tree = {
 					transfer_state = 836
 				}
 			}
+			836 = { set_state_name = "Romandie"}
 			set_province_name = { id = 6666 name = "Genève" }
 			add_state_core = 3
 			3 = { set_state_name = "Mittelschweiz"}

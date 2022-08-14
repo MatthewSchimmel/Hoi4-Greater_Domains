@@ -20,6 +20,7 @@ country_event = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_greater_german_reich
 		}
+		set_province_name = { id = 6521 name = "Germania" }
 	}
 	option = {
 		name = greaterGermany.1.b #Germany
@@ -44,6 +45,7 @@ country_event = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_grossgermanisches_reich_fascism
 		}
+		set_province_name = { id = 6521 name = "Germania" }
 	}
 }
 
@@ -130,8 +132,8 @@ country_event = {
 		DEN = {
 			form_scandinavia = yes
 			GER = {
-				release = PREV
-				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+				release = DEN
+				set_autonomy = { target = DEN autonomy_state = autonomy_integrated_puppet }
 			}
 		}
 	}
@@ -141,8 +143,8 @@ country_event = {
 		SWE = {
 			form_scandinavia = yes
 			GER = {
-				release = PREV
-				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+				release = SWE
+				set_autonomy = { target = SWE autonomy_state = autonomy_integrated_puppet }
 			}
 		}
 	}
@@ -152,8 +154,8 @@ country_event = {
 		NOR = {
 			form_scandinavia = yes
 			GER = {
-				release = PREV
-				set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+				release = NOR
+				set_autonomy = { target = NOR autonomy_state = autonomy_integrated_puppet }
 			}
 		}
 	}
