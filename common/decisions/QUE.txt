@@ -7,11 +7,12 @@ political_actions = {
 			original_tag = FRA
 		}
 		available = {
-			controls_state = 468
-			controls_state = 466
+			has_full_control_of_state = 468
+			has_full_control_of_state = 466
+			has_full_control_of_state = 837
 		}
 		visible = {
-			
+
 		}
 		cost = 75
 		days_remove = 90
@@ -36,13 +37,13 @@ political_actions = {
 	}
 }
 form_cabotia_category = {
-	
+
 	form_cabotia = {
 
 		icon = generic_form_nation
 
 		available = {
-			all_state = { 
+			all_state = {
 				OR = {
 					NOT = {
 						is_core_of = QUE
@@ -85,13 +86,13 @@ form_cabotia_category = {
 	}
 }
 form_northland_category = {
-	
+
 	form_northland = {
 
 		icon = generic_form_nation
 
 		available = {
-			all_state = { 
+			all_state = {
 				OR = {
 					NOT = {
 						is_core_of = ICE

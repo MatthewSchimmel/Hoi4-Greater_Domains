@@ -4705,9 +4705,12 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = { # cores the netherlands
-			add_state_core = 7
-			add_state_core = 35
-			add_state_core = 36
+			every_state = {
+				limit = {
+					is_core_of = HOL
+				}
+				add_core_of = GER
+			}
 			set_province_name = {id = 3211  name = "Den Haag"}
 			set_province_name = {id = 9363  name = "Arnheim"}
 			if = {
