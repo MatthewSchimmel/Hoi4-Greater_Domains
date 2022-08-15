@@ -4883,6 +4883,7 @@ focus_tree = {
 				tooltip = form_scandinavia_denmark_required_states_tt
 				controls_state = 37
 				controls_state = 99
+				controls_state = 838
 			}
 			custom_trigger_tooltip = {
 				tooltip = "scandinavia_already_exists_tt"

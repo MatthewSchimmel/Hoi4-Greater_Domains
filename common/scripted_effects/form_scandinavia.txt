@@ -54,6 +54,7 @@ form_scandinavia = {
         hidden_effect = {
             add_state_core = 37
             add_state_core = 99
+            add_state_core = 838
         }
         custom_effect_tooltip = form_scandinavia_denmark_controlling_states_tt
         hidden_effect = {

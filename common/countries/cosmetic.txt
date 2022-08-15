@@ -8,6 +8,24 @@ GER_grossgermanisches_reich_fascism = {
 	color_ui = rgb { 115 115 115 }
 }
 
+####################################
+QUE = {
+	color = rgb { 0 61 165 }
+	color_ui = rgb { 255 255 255 }
+}
+NAL = {
+	color = rgb { 0 154 73 }
+	color_ui = rgb { 255 153 204 }
+}
+NNG = {
+	color = rgb { 207 20 43 }
+	color_ui = rgb { 0 99 56 }
+}
+GRL = {
+	color = rgb { 255 255 255 }
+	color_ui = rgb { 253 253 253 }
+}
+#####################################
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

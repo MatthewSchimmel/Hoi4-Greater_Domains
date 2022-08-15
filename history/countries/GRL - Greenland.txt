@@ -1,0 +1,87 @@
+﻿capital = 101
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	fuel_silos = 1
+}
+
+set_convoys = 20
+
+set_research_slots = 2
+
+recruit_character = GRL_acr
+recruit_character = GRL_stc
+recruit_character = GRL_awt
+recruit_character = GRL_pot
+recruit_character = GRL_mt
+recruit_character = GRL_ncm
+recruit_character = GRL_nt
+recruit_character = GRL_acd2
+recruit_character = GRL_fascist_guy
+recruit_character = GRL_ncs
+recruit_character = GRL_nccr
+recruit_character = GRL_aco2
+recruit_character = GRL_communist_guy
+recruit_character = GRL_ai2
+recruit_character = GRL_ar
+recruit_character = GRL_coi
+recruit_character = GRL_acas
+recruit_character = GRL_acgs
+recruit_character = GRL_aa2
+recruit_character = GRL_democratic_guy
+
+
+
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 60
+	neutrality = 40
+}
+
+101 = {
+	add_core_of = GRL
+	set_victory_points = { province = 10245 value = 1 }
+	set_province_name = { id = 10245 name = "Nuuk" }
+}

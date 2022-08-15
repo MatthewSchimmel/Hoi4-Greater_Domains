@@ -1,0 +1,4 @@
+QUE	= "countries/Quebec.txt"
+NAL	= "countries/Newfoundland and Labrador.txt"
+NNG	= "countries/New England.txt"
+GRL	= "countries/Greenland.txt"

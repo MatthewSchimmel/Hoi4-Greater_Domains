@@ -1,0 +1,101 @@
+﻿capital = 468
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	fuel_silos = 1
+}
+
+set_convoys = 20
+
+set_research_slots = 3
+
+recruit_character = QUE_adélard_godbout
+recruit_character = QUE_acr
+recruit_character = QUE_stc
+recruit_character = QUE_awt
+recruit_character = QUE_pot
+recruit_character = QUE_mt
+recruit_character = QUE_ncm
+recruit_character = QUE_nt
+recruit_character = QUE_acd2
+recruit_character = QUE_fascist_guy
+recruit_character = QUE_ncs
+recruit_character = QUE_nccr
+recruit_character = QUE_aco2
+recruit_character = QUE_communist_guy
+recruit_character = QUE_ai2
+recruit_character = QUE_ar
+recruit_character = QUE_coi
+recruit_character = QUE_acas
+recruit_character = QUE_acgs
+recruit_character = QUE_aa2
+recruit_character = QUE_democratic_guy
+
+468 = {
+	add_core_of = QUE
+	add_dynamic_modifier = {
+		modifier = CAN_conscription_crisis
+	}
+}
+466 = {
+	add_core_of = QUE
+	add_dynamic_modifier = {
+		modifier = CAN_conscription_crisis
+	}
+}
+837 = {
+	add_core_of = QUE
+	add_dynamic_modifier = {
+		modifier = CAN_conscription_crisis
+	}
+}
+
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 93
+	fascism = 3
+	communism = 4
+}
+
