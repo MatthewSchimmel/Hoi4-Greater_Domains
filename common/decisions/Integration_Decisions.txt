@@ -417,7 +417,7 @@ GER_Volkersintegration = {
 			if = {
 				limit = {
 					AND = {
-						country_exists = POL
+						country_exists = CZE
 						CZE = {owns_state = 69}
 					}
 				}
@@ -462,7 +462,7 @@ GER_Volkersintegration = {
 			if = {
 				limit = {
 					AND = {
-						country_exists = POL
+						country_exists = CZE
 						CZE = {owns_state = 74}
 					}
 				}
@@ -1246,6 +1246,63 @@ BUL_integration = {
 		}
 	}
 }
+
+################
+### FINLAND ####
+################
+FIN_integration = {
+	FIN_core_Karelia = {
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+
+		#CONDITIONS
+		available = {
+			215 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			216 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					OR = {
+						SOV = {owns_state = 215}
+						SOV = {owns_state = 216}
+					}
+				}
+				SOV = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			or = {
+				215 = {
+					is_controlled_by = ROOT
+					NOT = {is_core_of = ROOT}
+				}
+				216 = {
+					is_controlled_by = ROOT
+					NOT = {is_core_of = ROOT}
+				}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+		complete_effect = {
+			add_state_core = 215
+			add_state_core = 216
+		}
+	}
+}
+
 
 SOV_integration = {
 	SOV_core_sBessab = {

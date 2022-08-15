@@ -94,6 +94,29 @@ BUL_integration = {
 	}
 }
 
+FIN_integration = {
+	allowed = {
+		original_tag = FIN
+		is_subject = no
+	}
+	visible = {
+		ROOT = {
+			is_ai = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+	}
+	visible_when_empty = yes
+	on_map_area = {
+		state = 215
+		state = 216
+		name = "Examine potential cores"
+		zoom = 400
+	}
+}
+
 SOV_integration = {
 	allowed = {
 		original_tag = SOV

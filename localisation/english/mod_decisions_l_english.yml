@@ -16,6 +16,16 @@
  GER_core_alsace:0 "Reintegrate Alsace"
  GER_core_Nordschleswig:0 "Integrate Nordschleswig"
 
+ FIN_integration:0 "Protector of the Karelians"
+ FIN_integration_desc:0 "The Karelians are our own brothers. With such kinship, we must declare ourselves protectors of the Karelian peoples, sharing with them our economic and political sucesses."
+ FIN_core_Karelia:0 "Integrate Karelia"
+
+
+ USA_statehood_for_british_columbia:0 "Grant Statehood to British Columbia"
+ USA_statehood_for_alberta:0 "Grant Statehood to Alberta"
+ USA_statehood_for_sasketchewan:0 "Grant Statehood to Sasketchewan"
+ USA_statehood_for_manitoba:0 "Grant Statehood to Manitoba"
+
  HUN_integration:0 "Hungarian Reintegration"
  HUN_integration_desc:0 "Now that we have control of our outer lands, we can finalize the process of reintegration to their true nation."
  HUN_core_Ruthenia:0 "Integrate Ruthenia"
