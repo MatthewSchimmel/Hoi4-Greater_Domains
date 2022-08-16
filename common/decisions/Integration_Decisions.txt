@@ -263,7 +263,7 @@ GER_Volkersintegration = {
  		targets = { state = 39 }
 		#CONDITIONS
 		available = {
-			has_completed_focus = GER_anschluss
+			has_completed_focus = GER_south_tyrol_agreement
 			39 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
