@@ -4581,6 +4581,12 @@ focus_tree = {
 			add_popularity = { ideology = fascism popularity = 0.05 }
 			add_state_core = 85 #danzig
 			add_state_core = 807 #gdynsk
+			807 = { set_state_name = "Westpreußen"}
+			set_province_name = {id = 279 name = "Bromberg"} #Bydgoszcz
+			set_province_name = {id = 3295 name = "Thorn"} #Toruń
+			set_province_name = {id = 9263 name = "Gotenhafen"} #Gdynia
+			custom_effect_tooltip = Volkersintegration
+			GER = { country_event = { id = greaterGermany.1 } }
 		}
 	}
 

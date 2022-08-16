@@ -43,6 +43,9 @@ recruit_character = NNG_democratic_guy
 464 = {
 	add_core_of = NNG
 }
+837 = {
+	add_claim_by = NNG
+}
 
 1939.1.1 = {
 	#generic focuses
@@ -55,7 +58,7 @@ recruit_character = NNG_democratic_guy
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
-	
+
 	set_technology = {
 
 		#doctrines

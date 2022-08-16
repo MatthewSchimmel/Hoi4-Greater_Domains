@@ -1,12 +1,12 @@
 ﻿l_english:
  QUE_fascism:0 "Nationaliste Québécois"
  QUE_fascism_DEF:0 "Nationaliste Québécois"
- QUE_democratic:0 "Quebec"
- QUE_democratic_DEF:0 "Quebec"
+ QUE_democratic:0 "Québec"
+ QUE_democratic_DEF:0 "Québec"
  QUE_neutrality:0 "New France"
  QUE_neutrality_DEF:0 "New France"
- QUE_communism:0 "Socialist Republic of Quebec"
- QUE_communism_DEF:0 "the Socialist Republic of Quebec"
+ QUE_communism:0 "Socialist Republic of Québec"
+ QUE_communism_DEF:0 "the Socialist Republic of Québec"
  QUE_ADJ:0 "Québécois"
 
  QUE_fascism_party:0 "Parti National Social Chrétien"
@@ -66,8 +66,8 @@
  COB_UNIFIED_democratic_DEF:0 "Cabotia"
  COB_UNIFIED_neutrality:0 "Cabotia Confederation"
  COB_UNIFIED_neutrality_DEF:0 "the Cabotia Confederation"
- COB_UNIFIED_communism:0 "Communist Government of Eastern Canada"
- COB_UNIFIED_communism_DEF:0 "the Communist Government of Eastern Canada"
+ COB_UNIFIED_communism:0 "Eastern Canadian Commune"
+ COB_UNIFIED_communism_DEF:0 "the Eastern Canadian Commune"
  COB_UNIFIED_ADJ:0 "Cabotian"
 
  NOL_UNIFIED_fascism:0 "Northlandic Empire"
@@ -85,4 +85,3 @@
  form_northland_category:0 "Form Northland"
  form_northland:0 "Form Northland"
  FRA_integrate_quebec:0 "Integrate Quebec"
- 

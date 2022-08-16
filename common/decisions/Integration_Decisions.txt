@@ -3,99 +3,6 @@
 #################
 
 GER_Volkersintegration = {
-		GER_core_danzig = {
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		state_target = yes ##put this line and next one under if statement to lock if not controlled
- 		targets = { state = 85 }
-		#CONDITIONS
-		available = {
-			has_completed_focus = GER_danzig_or_war
-			85 = {
-				resistance < 25
-				is_fully_controlled_by = ROOT
-			}
-			if = {
-				limit = {
-					POL = { has_completed_focus = POL_ban_the_nazi_party }
-				}
-				85 = {compliance > 60}
-			}
-			if = {
-				limit = {
-					AND = {
-						country_exists = POL
-						POL = {owns_state = 85}
-					}
-				}
-				POL = { has_capitulated = yes }
-			}
-		}
-		visible = {
-			85 = {
-				is_controlled_by = ROOT
-				NOT = {is_core_of = ROOT}
-			}
-		}
-
-		fire_only_once = no #if yes, will appear once and never again after excecution
-		#days_re_enable = 0 #invalid if fire_only_once = yes
-
-		cost = 0
-
-		#EFFECTS
-
-		complete_effect = {
-			add_state_core = 85
-		}
-	}
-
-	GER_core_gdynia = {
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		state_target = yes
- 		targets = { state = 807 }
-		#CONDITIONS
-		available = {
-			has_completed_focus = GER_danzig_or_war
-			807 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			if = {
-				limit = {
-					AND = {
-						country_exists = POL
-						POL = {owns_state = 807}
-					}
-				}
-				POL = { has_capitulated = yes }
-			}
-		}
-		visible = {
-			807 = {
-				is_controlled_by = ROOT
-				NOT = {is_core_of = ROOT}
-			}
-		}
-
-		fire_only_once = no #if yes, will appear once and never again after excecution
-		#days_re_enable = 0 #invalid if fire_only_once = yes
-
-		cost = 50
-
-		#EFFECTS
-
-		complete_effect = {
-			add_state_core = 807
-			807 = { set_state_name = "Westpreußen"}
-			set_province_name = {id = 279 name = "Bromberg"} #Bydgoszcz
-			set_province_name = {id = 3295 name = "Thorn"} #Toruń
-			set_province_name = {id = 9263 name = "Gotenhafen"} #Gdynia
-		}
-	}
-
 	GER_core_poznan = {
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
@@ -233,24 +140,17 @@ GER_Volkersintegration = {
 	}
 
 	GER_core_tyrol = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 153 }
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_anschluss
-			153 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			153 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = AUS
-						AUS = {owns_state = 153}
-					}
+					AUS = {owns_state = 153}
 				}
 				AUS = { has_capitulated = yes }
 			}
@@ -266,33 +166,30 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
-		complete_effect = {
+		remove_effect = {
 			add_state_core = 153
 		}
 	}
 
 	GER_core_upper_austria = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 152 }
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_anschluss
-			152 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			152 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = AUS
-						AUS = {owns_state = 152}
-					}
+					AUS = {owns_state = 152}
 				}
 				AUS = { has_capitulated = yes }
 			}
@@ -308,33 +205,30 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
-		complete_effect = {
+		remove_effect = {
 			add_state_core = 152
 		}
 	}
 
 	GER_core_lower_austria = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 4 }
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_anschluss
-			4 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			4 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = AUS
-						AUS = {owns_state = 4}
-					}
+					AUS = {owns_state = 4}
 				}
 				AUS = { has_capitulated = yes }
 			}
@@ -350,40 +244,36 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
-		complete_effect = {
+		remove_effect = {
 			add_state_core = 4
 		}
 	}
 
 	GER_core_south_tyrol = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 39 }
 		#CONDITIONS
 		available = {
-			has_completed_focus = GER_south_tyrol_agreement
-			39 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			has_completed_focus = GER_anschluss
+			39 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = AUS
-						AUS = {owns_state = 39}
-					}
+					AUS = {owns_state = 39}
 				}
 				AUS = { has_capitulated = yes }
 			}
 		}
 		visible = {
 			has_completed_focus = GER_anschluss
-			#ADD extra flag for no agreement
 			39 = {
 				is_controlled_by = ROOT
 				NOT = {is_core_of = ROOT}
@@ -393,39 +283,36 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
-		complete_effect = {
+		remove_effect = {
 			add_state_core = 39
 		}
 	}
 
 	GER_core_sudetenland = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 69 }
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_demand_sudetenland
-			69 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			69 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = CZE
-						CZE = {owns_state = 69}
-					}
+					CZE = {owns_state = 69}
 				}
 				CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			has_completed_focus = GER_demand_sudetenland
+			has_completed_focus = GER_anschluss
 			69 = {
 				is_controlled_by = ROOT
 				NOT = {is_core_of = ROOT}
@@ -435,42 +322,40 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
 		complete_effect = {
-			add_state_core = 69
 			set_province_name = {id = 11401 name = "Reichenberg"} #Liberec
 			set_province_name = {id = 3585 name = "Karlsbad"} #Carlsbad
+		}
+		remove_effect = {
+			add_state_core = 69
 		}
 	}
 
 	GER_core_east_sudetenland = {
-		icon = GFX_decision_icon_default
+		icon = generic_form_nation
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 74 }
-
 		#CONDITIONS
 		available = {
 			has_completed_focus = GER_demand_sudetenland
-			74 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
+			74 = { is_fully_controlled_by = ROOT }
 			if = {
 				limit = {
-					AND = {
-						country_exists = CZE
-						CZE = {owns_state = 74}
-					}
+					CZE = {owns_state = 74}
 				}
 				CZE = { has_capitulated = yes }
 			}
 		}
 		visible = {
-			has_completed_focus = GER_demand_sudetenland
+			has_completed_focus = GER_anschluss
 			74 = {
 				is_controlled_by = ROOT
 				NOT = {is_core_of = ROOT}
@@ -480,12 +365,18 @@ GER_Volkersintegration = {
 		fire_only_once = no #if yes, will appear once and never again after excecution
 		#days_re_enable = 0 #invalid if fire_only_once = yes
 
-		cost = 50
+		cost = 25
+		days_remove = 90
+		modifier = {
+			political_power_gain = -0.2
+		}
 
 		#EFFECTS
 		complete_effect = {
-			add_state_core = 74
 			set_province_name = {id = 3583 name = "Ostrau"} #Ostrava
+		}
+		remove_effect = {
+			add_state_core = 74
 		}
 	}
 

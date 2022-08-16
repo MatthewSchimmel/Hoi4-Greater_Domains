@@ -52,6 +52,9 @@ recruit_character = QUE_democratic_guy
 		modifier = CAN_conscription_crisis
 	}
 }
+730 = {
+	add_claim_by = QUE
+}
 
 1939.1.1 = {
 	#generic focuses

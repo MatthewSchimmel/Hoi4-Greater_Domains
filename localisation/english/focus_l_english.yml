@@ -319,6 +319,7 @@
  ### Greater German Reich Mod ###
  GER_proclaim_greater_germanic_reich:0 "Proclaim Greater German Reich"
  GER_proclaim_greater_germanic_reich_desc:0 "Now that our eastern lands are connected, we must galvanize the people with a new vision; to unify all Germanic peoples under a single state by reminding its people of their common German history. In this aim we will also eliminate the petty, smaller states of Europe that escaped the nationalization processes of the 19th century."
+ Volkersintegration:0 "Unlocks Decision Category §YVölkersintegration§!."
  GER_renationalize_switzerland:0 "Renationalize Switzerland"
  GER_renationalize_switzerland_desc:0 "Switzerland is controlled by cowardly 'neutral' international elements. Their media slanders us and Swiss banks deal with anyone and everyone, profiting off both sides of wars. We must return the land to the German majority and unite our mountainous brethren. We will deal with the rest as we see fit."
  GER_integrate_netherlands:0 "Integrate the Netherlands"
