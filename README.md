@@ -1,4 +1,4 @@
-# Hoi4-Greater_Germany
+# Greater Germany Refocused
 This is a mod for the video game "Hearts of Iron IV" that allows the integration of German areas of the game map through some additional focuses.
 This is a mod that allows the integration of external German states using decisions to add cores. It allows you to core states you missed by bypassing focuses, plus a few others.
 
