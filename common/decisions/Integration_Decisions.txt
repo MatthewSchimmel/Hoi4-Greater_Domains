@@ -3,14 +3,14 @@
 #################
 
 GER_Volkersintegration = {
-	GER_core_poznan = {
+	GER_core_poznan = { # Impossible through national focus
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 86 }
 		#CONDITIONS
 		available = {
-			has_completed_focus = GER_danzig_or_war
+			has_completed_focus = GER_demand_memel
 			86 = {
 				resistance < 25
 				compliance > 60
@@ -49,14 +49,14 @@ GER_Volkersintegration = {
 		}
 	}
 
-	GER_core_katowice = {
+	GER_core_katowice = { # Impossible through national focus
 		icon = GFX_decision_icon_default
 		on_map_mode = map_and_decisions_view
 		state_target = yes
  		targets = { state = 762 }
 		#CONDITIONS
 		available = {
-			has_completed_focus = GER_danzig_or_war
+			has_completed_focus = GER_demand_memel
 			762 = {
 				resistance < 25
 				compliance > 60
@@ -92,7 +92,7 @@ GER_Volkersintegration = {
 			add_state_core = 762
 			762 = { set_state_name = "Kattowitz"} #Katowice
 			hidden_effect = {
-				set_province_name = {id = 6464 name = "Kattowitz"}
+				set_province_name = {id = 6464 name = "Kattowitz"} #Katowice
 			}
 		}
 	}
@@ -136,6 +136,140 @@ GER_Volkersintegration = {
 		#EFFECTS
 		complete_effect = {
 			add_state_core = 188
+		}
+	}
+
+	GER_core_Nordschleswig = { # Impossible through national focus
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 838 }
+		#CONDITIONS
+		available = {
+			838 = {
+				resistance < 25
+				compliance > 60
+				is_fully_controlled_by = ROOT
+			}
+			if = {
+				limit = {
+					AND = {
+						country_exists = DEN
+						DEN = {owns_state = 838}
+					}
+				}
+				DEN = { has_capitulated = yes }
+			}
+		}
+		visible = {
+			838 = {
+				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+		complete_effect = {
+			add_state_core = 838
+		}
+	}
+
+	GER_core_alsace = { # Impossible through national focus
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 28 }
+		#CONDITIONS (has the requirements of the old focus)
+		available = {
+			has_completed_focus = GER_war_with_france
+			has_full_control_of_state = 28
+			OR = {
+				owns_state = 28
+				FRA = { has_capitulated = yes }
+				FRA = { is_subject_of = ROOT }
+				NOT = { #france doesn't exist
+					any_country = {
+						original_tag = FRA
+						exists = yes
+					}
+				}
+			}
+		}
+		visible = {
+			28 = {
+				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 28
+			if = {
+				limit = {
+					NOT = { owns_state = 28 }
+				}
+				transfer_state = 28
+			}
+			28 = { set_state_name = "Elsass-Lothringen" }
+			set_province_name = { id = 9503 name = "Strassburg" }
+			set_province_name = { id = 678 name = "Mulhausen" }
+			FRA = {
+				country_event = { id = wtt_germany.63 }
+			}
+		}
+	}
+
+	GER_core_luxemburg = { # Impossible through national focus
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+ 		targets = { state = 8 }
+		#CONDITIONS (has the requirements of the old focus)
+		available = {
+			has_completed_focus = GER_war_with_france
+			has_full_control_of_state = 8
+			OR = {
+				LUX = { has_capitulated = yes }
+				LUX = {exists = no}
+			}
+		}
+		visible = {
+			8 = {
+				is_controlled_by = ROOT
+				NOT = {is_core_of = ROOT}
+			}
+		}
+
+		fire_only_once = no #if yes, will appear once and never again after excecution
+		#days_re_enable = 0 #invalid if fire_only_once = yes
+
+		cost = 50
+
+		#EFFECTS
+
+		complete_effect = {
+			add_state_core = 8
+			if = {
+				limit = {
+					NOT = { owns_state = 8 }
+				}
+				transfer_state = 8
+			}
+			LUX = {
+				country_event = { id = wtt_germany.64 }
+			}
 		}
 	}
 
@@ -312,7 +446,7 @@ GER_Volkersintegration = {
 			}
 		}
 		visible = {
-			has_completed_focus = GER_anschluss
+			has_completed_focus = GER_demand_sudetenland
 			69 = {
 				is_controlled_by = ROOT
 				NOT = {is_core_of = ROOT}
@@ -355,7 +489,7 @@ GER_Volkersintegration = {
 			}
 		}
 		visible = {
-			has_completed_focus = GER_anschluss
+			has_completed_focus = GER_demand_sudetenland
 			74 = {
 				is_controlled_by = ROOT
 				NOT = {is_core_of = ROOT}
@@ -377,140 +511,6 @@ GER_Volkersintegration = {
 		}
 		remove_effect = {
 			add_state_core = 74
-		}
-	}
-
-	GER_core_luxemburg = {
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		state_target = yes
- 		targets = { state = 8 }
-		#CONDITIONS (has the requirements of the old focus)
-		available = {
-			has_full_control_of_state = 8
-			OR = {
-				LUX = { has_capitulated = yes }
-				LUX = {exists = no}
-			}
-		}
-		visible = {
-			8 = {
-				is_controlled_by = ROOT
-				NOT = {is_core_of = ROOT}
-			}
-		}
-
-		fire_only_once = no #if yes, will appear once and never again after excecution
-		#days_re_enable = 0 #invalid if fire_only_once = yes
-
-		cost = 50
-
-		#EFFECTS
-
-		complete_effect = {
-			add_state_core = 8
-			if = {
-				limit = {
-					NOT = { owns_state = 8 }
-				}
-				transfer_state = 8
-			}
-			LUX = {
-				country_event = { id = wtt_germany.64 }
-			}
-		}
-	}
-
-	GER_core_alsace = {
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		state_target = yes
- 		targets = { state = 28 }
-		#CONDITIONS (has the requirements of the old focus)
-		available = {
-			has_full_control_of_state = 28
-			OR = {
-				owns_state = 28
-				FRA = { has_capitulated = yes }
-				FRA = { is_subject_of = ROOT }
-				NOT = { #france doesn't exist
-					any_country = {
-						original_tag = FRA
-						exists = yes
-					}
-				}
-			}
-		}
-		visible = {
-			28 = {
-				is_controlled_by = ROOT
-				NOT = {is_core_of = ROOT}
-			}
-		}
-
-		fire_only_once = no #if yes, will appear once and never again after excecution
-		#days_re_enable = 0 #invalid if fire_only_once = yes
-
-		cost = 50
-
-		#EFFECTS
-
-		complete_effect = {
-			add_state_core = 28
-			if = {
-				limit = {
-					NOT = { owns_state = 28 }
-				}
-				transfer_state = 28
-			}
-			28 = { set_state_name = "Elsass-Lothringen" }
-			set_province_name = { id = 9503 name = "Strassburg" }
-			set_province_name = { id = 678 name = "Mulhausen" }
-			FRA = {
-				country_event = { id = wtt_germany.63 }
-			}
-		}
-	}
-
-	GER_core_Nordschleswig = {
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		state_target = yes
- 		targets = { state = 838 }
-		#CONDITIONS
-		available = {
-			has_completed_focus = GER_anschluss
-			838 = {
-				resistance < 25
-				compliance > 60
-				is_fully_controlled_by = ROOT
-			}
-			if = {
-				limit = {
-					AND = {
-						country_exists = DEN
-						DEN = {owns_state = 838}
-					}
-				}
-				DEN = { has_capitulated = yes }
-			}
-		}
-		visible = {
-			has_completed_focus = GER_anschluss
-			838 = {
-				is_controlled_by = ROOT
-				NOT = {is_core_of = ROOT}
-			}
-		}
-
-		fire_only_once = no #if yes, will appear once and never again after excecution
-		#days_re_enable = 0 #invalid if fire_only_once = yes
-
-		cost = 50
-
-		#EFFECTS
-		complete_effect = {
-			add_state_core = 838
 		}
 	}
 }
