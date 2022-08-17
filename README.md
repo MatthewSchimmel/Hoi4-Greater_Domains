@@ -9,10 +9,10 @@ Germany now has a new decisions category titled Volkersintegration, unlocked thr
 - BELGIUM: Flanders and Walloon can be cored by Netherlands and France respectively through the "Empower Belgian Seperatists" national focus.
 - NETHERLANDS: Can be integrated by Germany through the "Integrate the Netherlands" national focus.
 - Austria, Sudetenland, and Polish Corridor: Can be cored if the Anschluss, Demand Sudetenland, and Danzig or War focuses are bypassed or the countries deny.
-- ITALY: New events to try to gain influence over the previously Austrian South Tyrolean population
-- Hungary, Bulgaria, Russia, Finland, United States: Decisions category to core states missed through dedicated focuses, or immediately if no dlc.
-– Removes the Russian decisions to core Finnish cores (unhistorical & unrealistic)
-– Adds the states of Nordschleswig and East Saint Lawrence (break-offs of Jutland and Saint Lawrence respectively). These states have no buildings and merely exist for better border management
-– Added NEW loading screen pictures! These are real, historical photographs
+- ITALY: New events to try to gain influence over the previously Austrian South Tyrolean population.
+- Hungary, Bulgaria, Russia, Finland, United States: Decisions category to core states missed through dedicated focuses, or immediately if no dlc. Also gains ability to core states that are historically and logically part of the playable nation.
+– Removes the Russian decisions to core Finnish cores (unhistorical & unrealistic).
+– Adds the states of Nordschleswig and East Saint Lawrence (break-offs of Jutland and Saint Lawrence respectively). These states have no buildings and merely exist for better border management.
+– Added NEW loading screen pictures! These are real, historical photographs of the second world war.
 – Dozens of all NEW flags for many nations, including dedicated reichskommisariat flags!
-– Adds new releasable nations of Quebec, Greenland, New England, and Newfoundland and Labrador, as well as Slovakia (already in game but with no starting cores)
+– Adds new releasable nations of Quebec, Greenland, New England, and Newfoundland and Labrador, as well as Slovakia (already in game but with no starting cores).
