@@ -1,6 +1,8 @@
 # Greater Germany Refocused
+[Available on Steam here](https://steamcommunity.com/sharedfiles/filedetails/?id=2844729564)
+
 This is a mod for the video game "Hearts of Iron IV" that allows the integration of German areas of the game map through some additional focuses.
-It allows the integration of external German states using decisions to add cores. It allows you to core states you missed by bypassing focuses, plus a few others based on my analysis of historical demographics.
+It allows the integration of external German states using decisions to add cores including ones missed by bypassing focuses, plus a few others based on my analysis of historical demographics.
 
 Germany has an expanded focus tree, with five extra focuses off of Rhineland, and one off of <i>Form The Reichskommisariats</i>. They allow for the coring and/or splitting of harder states not included in the decisions menu, such as Switzerland or the low countries.
 
@@ -25,7 +27,7 @@ Hungary, Bulgaria, Russia, Finland, and The United States were also given dedica
 - There are errors coming from the </i>map/buildings.txt</i> file. These are because of the fact that I did not copy and refactor file to alter the buildings supposedly found within the new map states I created. However, these too don't affect gameplay.
 
 #### The future
- I plan on adding more RK puppets to the RK decision category. I know there are many mods that do this, but many are to maximalistic or otherwise unrealistic. I plan on taking from other mods and editing/smoothing the edges before integration into this mod. 
+ I plan on adding more RK puppets to the RK decision category. I know there are many mods that do this, but many are to maximalistic or otherwise unrealistic. I plan on taking from other mods and editing/smoothing the edges before integration into this mod.
  Possible Puppets:
   - RK Bohemia-Moravia (rename the cities)
   - Kingdom of Poland

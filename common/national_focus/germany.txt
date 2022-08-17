@@ -4776,9 +4776,15 @@ focus_tree = {
 		completion_reward = {
 			FRA = {add_state_core = 34}
 			IF = {
-				limit = { FRA = {is_puppet_of = GER}}
+				limit = { FRA = {is_puppet_of = GER} }
 				FRA = {
 					transfer_state = 34
+				}
+				IF = {
+					limit = {
+						BEL = { has_full_control_of_state = 29 }
+					}
+					FRA = { transfer_state = 29 }
 				}
 			}
 			HOL = {add_state_core = 6}
