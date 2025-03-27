@@ -1,11 +1,9 @@
 <pre>
-  _    _  ____ _______      __   _____                _              _____                        _           
- | |  | |/ __ \_   _\ \    / /  / ____|              | |            |  __ \                      (_)          
- | |__| | |  | || |  \ \  / /  | |  __ _ __ ___  __ _| |_ ___ _ __  | |  | | ___  _ __ ___   __ _ _ _ __  ___ 
- |  __  | |  | || |   \ \/ /   | | |_ | '__/ _ \/ _` | __/ _ \ '__| | |  | |/ _ \| '_ ` _ \ / _` | | '_ \/ __|
- | |  | | |__| || |_   \  /    | |__| | | |  __/ (_| | ||  __/ |    | |__| | (_) | | | | | | (_| | | | | \__ \
- |_|  |_|\____/_____|   \/      \_____|_|  \___|\__,_|\__\___|_|    |_____/ \___/|_| |_| |_|\__,_|_|_| |_|___/
- </pre>
+ __  __   ___   __ __ __      ___  ____   ____  ___  ______  ____ ____     ____     ___   ___  ___  ___  __ __  __  __ 
+ ||  ||  // \\  || || ||     // \\ || \\ ||    // \\ | || | ||    || \\    || \\   // \\  ||\\//|| // \\ || ||\ || (( \
+ ||==|| ((   )) || \\ //    (( ___ ||_// ||==  ||=||   ||   ||==  ||_//    ||  )) ((   )) || \/ || ||=|| || ||\\||  \\ 
+ ||  ||  \\_//  ||  \V/      \\_|| || \\ ||___ || ||   ||   ||___ || \\    ||_//   \\_//  ||    || || || || || \|| \_))
+</pre>
 ### Greater Domains Refocused: By Matthew Schimmel
 This is a mod for the video game "Hearts of Iron IV" that allows the integration of more areas of the game map through some additional focuses.
 It allows the integration of some close states using decisions to add cores including ones missed by bypassing focuses, plus a few others based on my analysis of historical demographics.
